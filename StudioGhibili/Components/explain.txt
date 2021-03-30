@@ -1,0 +1,64 @@
+﻿
+<!-- -******************** USE the other razor file, don't know what's the pp with this shitt ************************* -->
+
+<!-- ********************-1- Using Statments -->
+
+@using Microsoft.AspNetCore.Components.Web
+@using StudioGhibili.Models
+@using StudioGhibili.Services
+
+<!-- ******************** Add Some Services -->
+
+@inject JsonCharacterService myJsonService
+
+<!-- ******************** -2- HTML -->
+
+<div class="card-columns">
+    <!-- ******************** myJsonService.GetCharacters from what we Injected before-->
+
+    @foreach (var character in myJsonService.GetCharacters())
+    {
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title" style="color:cornflowerblue; font-family:Arial, Helvetica, sans-serif; font-weight:bolder;">@character.name&nbsp;</h3>
+                <div class="card-text">
+                    <h5>From Movie: <span style="font-style: italic">@character.movie&nbsp;@character.year</span></h5>
+                    <br />
+                    <h6>@character.descripition&nbsp;</h6>
+                </div>
+            </div>
+            <div class="card-img" style="background-image: url('@character.image'); height: 250px; "></div>
+
+        </div>
+        <!-- ******************** Let's Add BUTTON -->
+        <div class="card-footer">
+            <small>
+             <!-- ******************** Blazor Events: ONCLICK EVENT , when click happen call this Func, which we'll define later 
+             When button clicked on we want to POP UP a Dialog box, so we add "data-toggle="modal" and the target we havent made yet 
+             -->
+                <button @onclick=" (event => SelectCharacter(character.name)" data-toggle="modal" data-target="#characterModal" class="btn btn-primary">
+                    More Info.
+                </button>
+            </small>
+        </div>
+
+                            }
+</div>
+
+<!-- ******************** -3- Code that handles the component -->
+
+@code {
+<!-- ******************** -We need to capture the  (Character name + selected Character obj) of clicked Character card -->
+        Character selectCharacter;
+        string selectCharacterName;
+
+        void SelectCharacter(string name)
+        {
+            selectCharacterName = name;
+            //***************** LINQ
+            selectCharacter = CharacterService.GetCharacters().First(x => x.name == name);
+        }
+}
+<!-- ******************** go to "Startup" to Register ( in ConfigureServices() ) and Use ( in Configure(), app.UseEndpoints() ) this Blazor component -->
+<!-- ******************** Blazor needs JavaScript, so add that JS file into index or Layout -->
+<!-- ******************** Render this Blazor Com. in Razor page with @(await Html.RenderComponentAsync<CharacterList>(RenderMode.ServerPrerendered)) -->

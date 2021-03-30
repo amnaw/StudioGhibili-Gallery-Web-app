@@ -1,0 +1,64 @@
+﻿@page
+@model IndexModel
+@using StudioGhibili.Components
+@{
+    ViewData["Title"] = "Home page";
+}
+<!-- This is Razor (cshtml)
+
+    where C# (Server-Side not JS) goes after the AT
+
+-->
+<!-- L1: this line "deractive" specities it is a Razor page  -->
+<!-- L2: From Class L12 in the nested file index.cshtml.cs
+    This model "IndexModel" associated with this page knows about the other data that should be displayed
+  -->
+<!-- L3: Set the page title , in the title tag of HTML doc in the Layout  -->
+
+<div class="text-center">
+    <br />
+    <h3 class="display-6 title">Welcome to Studio Ghibili Gallery 2020 - 2021<br /></h3><h1 class="display-4 title" style="font-family: 'Racing Sans One', cursive; color:lightseagreen">Super-girls</h1>
+    <!--<button onclick="count" type="button">Count Letters in file</button>-->
+    <br />
+    <h1>Now is @Model.Time</h1>
+    <br />
+</div>
+
+<!--  Add @using StudioGhibili.Components -->
+<!-- Await, cuz its predefined Async func - this Async func renders our component as name its specified -->
+@(await Html.RenderComponentAsync<CharacterList>(RenderMode.ServerPrerendered))
+<!--  Blazor needs JavaScript, so add this JS file into index or Layout -->
+<script src="_framework/blazor.server.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UPDATE: we're moving this block to RAZOR component that has some code and more advance -->
+<!--<div class="card-columns colored">-->
+<!-- Model here is referring to the model in L2-->
+<!--@foreach (var character in Model.Characters)
+    {
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title" style="color:cornflowerblue; font-family:Arial, Helvetica, sans-serif; font-weight:bolder;">@character.name&nbsp;</h3>
+            <div class="card-text"><h5>From Movie: <span style="font-style: italic">@character.movie&nbsp;@character.year</span></h5>
+            <br />
+            <h6>@character.descripition&nbsp;</h6>
+            </div>
+        </div>
+        <div class="card-img" style="background-image: url('@character.image'); height: 250px; "></div>
+
+    </div>
+
+}
+</div>-->

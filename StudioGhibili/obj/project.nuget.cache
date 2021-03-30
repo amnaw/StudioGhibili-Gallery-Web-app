@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "nnqV+rpUd4gU6uIqPMm1Pzoy0ZqWaa78/f4wfUeBknla9X5VGd+XjC0v2g9ht7HmX+ib+lw8EOR2q4XFg3lpfA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\amina\\Desktop\\StudioGhibili\\StudioGhibili\\StudioGhibili.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\amina\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+  ],
+  "logs": []
+}

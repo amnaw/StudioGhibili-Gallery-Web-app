@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Chihiro",
+    "img": "https://i.pinimg.com/originals/66/9a/03/669a032ddac1220a579f60399b716918.gif",
+    "movie": "Spirited Away",
+    "year": 2001,
+    "descripition": "Referred throughout most of the film by her nickname Sen, Chihiro is a shy, pessimistic, 10-year-old girl. During her adventure in the Spirit World, she matures from an easily-scared girl with a child-like personality to match her age to a hard-working, responsible, and brave young girl.",
+    "Ratings": null
+  },
+  {
+    "name": "Sheeta",
+    "img": "https://images.gr-assets.com/hostedimages/1547370597ra/26909822.gif",
+    "movie": "Castle in the sky",
+    "year": 1986,
+    "descripition": "Sheeta, whose full name is Lusheeta Toel Ul Laputa, is a 13-year-old orphaned farm girl. Her glowing stone keeps Laputa alive. ",
+    "Ratings": [
+      3
+    ]
+  },
+  {
+    "name": "San",
+    "img": "https://pa1.narvii.com/6133/4950ba1d3f3dcfa021d7aca7f8ec2b57d0bf60b3_hq.gif",
+    "movie": "Princess Mononoke",
+    "year": 1997,
+    "descripition": "San, otherwise known as Princess Mononoke or the \u0022Wolf Girl,\u0022 is the main character, along with Ashitaka, She acts, behaves, and resembles a wolf due to the fact that she was raised by wolves themselves.",
+    "Ratings": [
+      5,
+      4,
+      2,
+      1,
+      5
+    ]
+  },
+  {
+    "name": "Sophie",
+    "img": "https://image.myanimelist.net/ui/5zdzFcBcrbnYLs3CUyho0PityePBUMyKNmVrUQhTLHhlH_cqkB2iFHmIN6A95VL1sGnTeIW1n4sJ2yf276WyuULh4adhMvSLP88mGgwcC_m2MOznlLMxbCRyMaj5zsk1",
+    "movie": "Howl\u0027s Moving Castle",
+    "year": 2004,
+    "descripition": "Sophie Hatter is the main character in Studio Ghibli\u0027s film Howl\u0027s Moving Castle. She runs a hat shop in her town along with her sisters and mother. When the Witch of the Waste curses her with a spell that turns her into a ninety-year old woman, Sophie goes to the Waste in search of a cure.",
+    "Ratings": [
+      3,
+      5,
+      1
+    ]
+  }
+]
